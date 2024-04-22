@@ -1,4 +1,4 @@
-import notas.*;
+/*import notas.*;
 
 public class Main2 {
 	static final String[] als = {
@@ -47,3 +47,4 @@ public class Main2 {
 		}
 	}
 }
+*/
