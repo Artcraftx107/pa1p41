@@ -11,7 +11,7 @@ public class Estudiante {
     }
     public Estudiante(String d, String n, double not) throws EstudianteException{
         if(not<0){
-            throw new EstudianteException("La nota no puede ser negativa");
+            throw new EstudianteException("Calificacion negativa");
         }else{
             this.dni=d;
             this.nombre=n;
@@ -37,17 +37,18 @@ public class Estudiante {
         if (obj == null || getClass() != obj.getClass()) return false;
         Estudiante estudiante = (Estudiante) obj;
         return dni.equalsIgnoreCase(estudiante.dni) &&
-                nombre.equalsIgnoreCase(estudiante.nombre);
+                nombre.equals(estudiante.nombre);
     }
 
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return dni.toUpperCase().hashCode()+nombre.hashCode();
     }
+
 
     @Override
     public String toString() {
-        return this.nombre+" "+this.dni;
+        return this.nombre+" ("+this.dni+")";
     }
 }

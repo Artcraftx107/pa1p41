@@ -62,10 +62,15 @@ public class Asignatura {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(nombre).append(": { [");
-        for (Estudiante est : estudiantes) {
-            sb.append(est).append(", ");
+        for (int i = 0; i< estudiantes.size(); i++) {
+            if(i+1!=estudiantes.size()) {
+                sb.append(estudiantes.get(i)).append(", ");
+            }else{
+                sb.append(estudiantes.get(i)).append("],");
+            }
         }
         if (!errores.isEmpty()) {
+            sb.append("[");
             for (String error : errores) {
                 sb.append(error).append(", ");
             }
