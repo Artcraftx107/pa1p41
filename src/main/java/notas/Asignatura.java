@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 public class Asignatura {
     private String nombre;
-    private List<Estudiante> estudiantes;
+    private ArrayList<Estudiante> estudiantes;
     private List<String> errores;
     public Asignatura(String nombre, String[] infoEstudiantes){
         this.nombre = nombre;
@@ -40,7 +40,7 @@ public class Asignatura {
         throw new EstudianteException("Estudiante " + est.toString() + " no se encuentra");
     }
 
-    public List<Estudiante> getEstudiantes() {
+    public ArrayList<Estudiante> getEstudiantes() {
         return estudiantes;
     }
 
