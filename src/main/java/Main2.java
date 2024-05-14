@@ -1,5 +1,4 @@
 import notas.*;
-
 public class Main2 {
 	static final String[] als = {
 			"25653443S;Garcia Gomez, Juan;8.1",
@@ -28,8 +27,7 @@ public class Main2 {
 				MediaSinExtremos m3 = new MediaSinExtremos(5.0, 9.0);
 				System.out.println("Media aritmética: " + algebra.getMedia(m1));
 				System.out.println("Media armónica: " + algebra.getMedia(m2));
-				System.out.println("Media de valores en ["+m3.getMin()+", "+m3.getMax()+"]: "
-						+ algebra.getMedia(m3));
+				System.out.println("Media de valores en ["+m3.getMin()+", "+m3.getMax()+"]:"+ algebra.getMedia(m3));
 			} catch (EstudianteException e) {
 				System.err.println(e.getMessage());
 			}
