@@ -1,6 +1,6 @@
 package notas;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MediaSinExtremos implements CalculoMedia {
     private double min;
@@ -32,7 +32,7 @@ public class MediaSinExtremos implements CalculoMedia {
     }
 
     @Override
-    public double calcula(ArrayList<Estudiante> estudiantes) throws EstudianteException {
+    public double calcula(List<Estudiante> estudiantes) throws EstudianteException {
         double aux = 0;
         double media = 0;
         for(int i = 0; i<estudiantes.size(); i++){

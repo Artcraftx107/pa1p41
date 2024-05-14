@@ -1,5 +1,6 @@
 package notas;
-import java.util.ArrayList;
+import java.util.List;
+
 public interface CalculoMedia {
-    double calcula(ArrayList<Estudiante> estudiantes) throws EstudianteException;
+    double calcula(List<Estudiante> estudiantes) throws EstudianteException;
 }
